@@ -29,7 +29,7 @@ class LambdaExpressions {
 
     fun execute(){
         val simpleLambdaFullSyntax : () -> Unit = { Log.v(TAG, "Hello simpleLambdaFullSyntax") }
-        simpleLambdaFullSyntax.invoke()
+        simpleLambdaFullSyntax() // Short way to invoke
 
 
         val simpleLambdaShortSyntax = { Log.v(TAG, "Hello simpleLambdaShortSyntax") }
@@ -41,13 +41,13 @@ class LambdaExpressions {
          */
 
         val lambdaWithParameterFullSyntax : (String?) -> Unit = { name: String? -> Log.v(TAG,"My name is $name") }
-        lambdaWithParameterFullSyntax.invoke(null)
+        lambdaWithParameterFullSyntax(null)
 
         val lambdaWithParameterShortSyntaxFirst = { name: String? -> Log.v(TAG,"My name is $name") }
-        lambdaWithParameterShortSyntaxFirst.invoke(null)
+        lambdaWithParameterShortSyntaxFirst(null)
 
         val lambdaWithParameterShortSyntaxSecond: (String?) -> Unit = { name -> Log.v(TAG,"My name is $name") }
-        lambdaWithParameterShortSyntaxSecond.invoke(null)
+        lambdaWithParameterShortSyntaxSecond(null)
 
 
 

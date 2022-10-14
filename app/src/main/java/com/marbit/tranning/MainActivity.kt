@@ -11,5 +11,6 @@ class MainActivity : AppCompatActivity() {
         val lambdaExample = LambdaExpressions()
 
         lambdaExample.execute()
+
     }
 }
